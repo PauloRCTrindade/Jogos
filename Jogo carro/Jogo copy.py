@@ -22,10 +22,10 @@ velocidade = 20     #velocidade do carro Play
 velocidade02 = 20   #velocidade do carro 02
 velocidade_Fundo2 = 5
 
-fundo2 = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\pista copy.png')
+fundo2 = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\pista.png')
 fundo = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\pista.png')
 carro = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\carroPlay.png')
-#carro02 = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\carro02.png')
+carro02 = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\carro02.png')
 carro03 = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\carro03.png')
 carro04 = pygame.image.load('C:\Paulo T\VSC\PY\.vscode\Jogo\carro04.png')
 

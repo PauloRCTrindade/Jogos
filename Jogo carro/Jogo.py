@@ -26,11 +26,11 @@ velocidade02 = 30   #velocidade dos demais carros
 
 
 #carregamento das imagens
-fundo = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\pista.png')
-carroPlay = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carroPlay.png')
-carro02 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro02.png')
-carro03 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro03.png')
-carro04 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro04.png')
+fundo = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\pista.png')
+carroPlay = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carroPlay.png')
+carro02 = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro02.png')
+carro03 = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro03.png')
+carro04 = pygame.image.load('C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro04.png')
 
 font = pygame.font.SysFont('arial black', 25)
 texto = font.render("Tempo: ",True,(255,255,255),(0,0,0))
