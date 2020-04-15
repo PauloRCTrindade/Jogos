@@ -1,2 +1,0 @@
-# Jogos
- criação de jogs
