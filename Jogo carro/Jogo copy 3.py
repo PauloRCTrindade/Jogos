@@ -3,7 +3,8 @@ from random import randint
 
 pygame.init()
 
-
+xx = 0
+yy = 0
 
 x = 180     # 180 340 540   #posição x do carro play
 y = 370         #posição y do carro play
@@ -17,21 +18,25 @@ pos_y03 = -900    # posição y do carro 03
 pos_x04 = 510
 pos_y04 = -600
 
+ajuste_carro2 = 0
+ajuste_carro3 = 0
+ajuste_carro4 = 0
+
 
 timer = 0
 tempo_segundo = 0
 
-velocidade = 20     #velocidade do carro Play
-velocidade02 = 30   #velocidade dos demais carros
+velocidade = 50     #velocidade do carro Play
+velocidade02 = 100   #velocidade dos demais carros
 
-    for n in range ( -400,0): 
+ 
 
 #carregamento das imagens
-fundo = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\pista.png')
-carroPlay = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carroPlay.png')
-carro02 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro02.png')
-carro03 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro03.png')
-carro04 = pygame.image.load('C:\Paulo T\VSC\PY\Jogo\Imagens\carro04.png')
+fundo = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\pista.png')
+carroPlay = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carroPlay.png')
+carro02 = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro02.png')
+carro03 = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro03.png')
+carro04 = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\carro04.png')
 
 font = pygame.font.SysFont('arial black', 25)
 texto = font.render("Tempo: ",True,(255,255,255),(0,0,0))
@@ -65,25 +70,54 @@ while janela_aberta:
         #y-= velocidade
     #if comandos[pygame.K_DOWN]:
         #y+= velocidade
-    if comandos[pygame.K_RIGHT] and x <= 498:
+    if comandos[pygame.K_RIGHT] and x <= 478:
         x+= velocidade
-    if comandos[pygame.K_LEFT]  and x >= 190:
+    if comandos[pygame.K_LEFT]  and x >= 200:
         x-= velocidade
     
     if (pos_y02 >= 900):
-        pos_y02 = randint(-800,-200)
+        pos_y02 =randint(-4000,-1250)
         #print('Carro Azul',pos_y02)
     if (pos_y03 >= 900):
-        pos_y03 = randint(-1700,-1100 )
+        pos_y03 = randint(-4000,-1250 )
         #print('carro vermelho',pos_y03)
     if (pos_y04 >= 900):
-        pos_y04 = randint(-2600,-2000)
-       # print('carro laranja', pos_y04)        
+        pos_y04 = randint(-4000,-1250)
+        #print('carro laranja', pos_y04)        
 
-    #if pos_y02 == n and pos_y03 == n:
-        #print('bateu',pos_y02, pos_y03)
+    if pos_y02 >= -700 and pos_y02 <= -200:
+        ajuste_carro2 = 10
+        #print(ajuste_carro2,pos_y02)
+    else:
+        ajuste_carro2 = 5
+    if pos_y03 >= -700 and pos_y03 <= -200:
+        ajuste_carro3 = 10
+        #print(ajuste_carro3,pos_y03)
+    else:
+        ajuste_carro3 = 3
+    if pos_y04 >= -700 and pos_y04 <=-200:
+        ajuste_carro4 = 10
+        #print(ajuste_carro4,pos_y04)
+    else:
+        ajuste_carro4 = 7
+    if ajuste_carro2 == ajuste_carro3 == ajuste_carro4:
+        print(ajuste_carro2,pos_y02,ajuste_carro3,pos_y03,ajuste_carro4,pos_y04,'ajuste')
+        pos_y02 = 900
+        pos_y03 = 900
+        pos_y04 = 900
+        #print(pos_y02,pos_y03,pos_y04,'ajuste')
+        #print(pos_y02,ajuste_carro2,pos_y03,ajuste_carro3,"mesma zona")
+    #print('carro 02 posição {}  {} carro 03 posição {}  {}  '.format(pos_y02,ajuste_1,pos_y03,ajuste_2,))
+      
 
+   
+    #if (xx == yy):
+        #print(pos_y02,pos_y03,ajuste)
 
+            #, pos_y03 >=300 and pos_y03 <=600):
+            #pos_y02 = -200
+            ##print(pos_y02,ajuste,zona_conflito)#,pos_y03 , ajuste,'ajuste')
+            #pos_y02 = -400 
 
 
 
@@ -96,8 +130,8 @@ while janela_aberta:
         timer = 0
     
     pos_y02 += velocidade02
-    pos_y03 += velocidade02  + 2
-    pos_y04 += velocidade02  + 10
+    pos_y03 += velocidade02  #+ 5
+    pos_y04 += velocidade02  #+ 10
 
 
     janela.blit(fundo,(0,0,))
