@@ -11,10 +11,11 @@ pos_x02 = 200     # posição x do carro 02
 pos_y02 = -200     # posição y do carro 02
 
 pos_x03 = 355    # posição x do carro 03
-pos_y03 = -900    # posição y do carro 03
+pos_y03 = -200    # posição y do carro 03
 
 pos_x04 = 510
-pos_y04 = -600
+pos_y04 = -200
+
 
 
 timer = 0
@@ -23,7 +24,7 @@ tempo_segundo = 0
 velocidade = 20     #velocidade do carro Play
 velocidade02 = 30   #velocidade dos demais carros
 
-
+ 
 
 #carregamento das imagens
 fundo = pygame.image.load(r'C:\Users\Paulo Trindade\Documents\Meu_GitHub\Jogos\Jogo carro\arquivos\pista.png')
@@ -41,6 +42,8 @@ pos_texto.center = (60,50)
 janela = pygame.display.set_mode((800,600)) # tamanho da tela
 pygame.display.set_caption('JOGO DO KAZI 1.0') # nome na parte superior
 
+
+
 janela_aberta = True
 while janela_aberta:
     pygame.time.delay(50)
@@ -51,6 +54,8 @@ while janela_aberta:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             janela_aberta = False
+    
+   
 
     comandos = pygame.key.get_pressed()
     #if comandos[pygame.K_UP]:
@@ -61,21 +66,26 @@ while janela_aberta:
         x+= velocidade
     if comandos[pygame.K_LEFT]  and x >= 190:
         x-= velocidade
-    
+
     if (pos_y02 >= 900):
-        pos_y02 = randint(-800,-200)
+            #pos_y02 = -200 #randint(-800,-200)
         #print('Carro Azul',pos_y02)
     if (pos_y03 >= 900):
-        pos_y03 = randint(-1700,-1100 )
+            pos_y03 = -200#randint(-1700,-1100 )
         #print('carro vermelho',pos_y03)
     if (pos_y04 >= 900):
-        pos_y04 = randint(-2600,-2000)
+            pos_y04 = -200 #randint(-2600,-2000)
        # print('carro laranja', pos_y04)        
 
     #if pos_y02 == n and pos_y03 == n:
         #print('bateu',pos_y02, pos_y03)
 
+    #ajuste = 200 
 
+    for ajuste in range(300,400):
+        print(ajuste)
+        if (pos_y02 and pos_y03 == ajuste):
+            pos_y02 = -200 
 
 
 
@@ -88,8 +98,8 @@ while janela_aberta:
         timer = 0
     
     pos_y02 += velocidade02
-    pos_y03 += velocidade02  + 2
-    pos_y04 += velocidade02  + 10
+    pos_y03 += velocidade02  #+ 2
+    pos_y04 += velocidade02  #+ 10
 
 
     janela.blit(fundo,(0,0,))

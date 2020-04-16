@@ -1,2 +1,3 @@
-print(1+1//2)
-
+import random
+for ajuste in range(200,300):
+    print(ajuste)
