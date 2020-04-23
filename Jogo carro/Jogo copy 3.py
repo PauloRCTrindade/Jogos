@@ -26,8 +26,8 @@ ajuste_carro4 = 0
 timer = 0
 tempo_segundo = 0
 
-velocidade = 50     #velocidade do carro Play
-velocidade02 = 100   #velocidade dos demais carros
+velocidade = 20     #velocidade do carro Play
+velocidade02 = 20   #velocidade dos demais carros
 
  
 
@@ -105,19 +105,13 @@ while janela_aberta:
         pos_y02 = 900
         pos_y03 = 900
         pos_y04 = 900
-        #print(pos_y02,pos_y03,pos_y04,'ajuste')
-        #print(pos_y02,ajuste_carro2,pos_y03,ajuste_carro3,"mesma zona")
-    #print('carro 02 posição {}  {} carro 03 posição {}  {}  '.format(pos_y02,ajuste_1,pos_y03,ajuste_2,))
-      
+
+
+    
+    print(x,y)
 
    
-    #if (xx == yy):
-        #print(pos_y02,pos_y03,ajuste)
-
-            #, pos_y03 >=300 and pos_y03 <=600):
-            #pos_y02 = -200
-            ##print(pos_y02,ajuste,zona_conflito)#,pos_y03 , ajuste,'ajuste')
-            #pos_y02 = -400 
+    
 
 
 
