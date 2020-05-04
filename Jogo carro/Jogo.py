@@ -26,8 +26,8 @@ ajuste_carro4 = 0
 timer = 0
 tempo_segundo = 0
 
-velocidade = 50     #velocidade do carro Play
-velocidade02 = 100   #velocidade dos demais carros
+velocidade = 50    #velocidade do carro Play
+velocidade02 = 30   #velocidade dos demais carros
 
  
 
